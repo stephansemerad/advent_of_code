@@ -14,12 +14,7 @@ for line in lines:
     group_1, group_2 = line.split(",")
     group_1, group_2 = convert_to_range(group_1), convert_to_range(group_2)
     comparison = list(set(group_1).intersection(set(group_2)))
-    print(group_1, group_2, comparison)
-
     if comparison == group_1 or comparison == group_2:
-        print("one_score")
         score += 1
-
-    # print("")
 
 print("score: ", score)
